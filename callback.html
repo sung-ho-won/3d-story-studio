@@ -1,0 +1,8 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Connected · 3D Story Studio</title>
+<style>body{margin:0;background:#F4EAD8;color:#1D2A44;font:17px/1.6 -apple-system,"Helvetica Neue",Arial,sans-serif}main{max-width:720px;margin:0 auto;padding:48px 16px}h1{font-size:30px}code{display:block;word-break:break-all;background:#fff;padding:12px;border-radius:8px}</style></head>
+<body><main><h1 id="t">Connecting your TikTok account…</h1><p id="m"></p><code id="c" hidden></code></main>
+<script>
+const q=new URLSearchParams(location.search);const code=q.get('code'),err=q.get('error');
+if(err){document.getElementById('t').textContent='Connection was not completed';document.getElementById('m').textContent=q.get('error_description')||err;}
+else if(code){document.getElementById('t').textContent='TikTok account connected';document.getElementById('m').textContent='Return to 3D Story Studio on your computer. It will finish the connection with this code:';const c=document.getElementById('c');c.textContent=code;c.hidden=false;}
+</script></body></html>
